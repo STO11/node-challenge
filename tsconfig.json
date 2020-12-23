@@ -6,9 +6,16 @@
     "outDir": "./dist",                        /* Redirect output structure to the directory. */
     "rootDir": "./src",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     "removeComments": true,                /* Do not emit comments to output. */
-    "typeRoots": [
+    "typeRoots": [                        /* List of folders to include type definitions from. */
       "./node_modules/@types"
-    ],                                        /* List of folders to include type definitions from. */
+    ],  
+    "baseUrl": ".",
+    "paths": {
+      "@controllers" : ["./src/controllers/*"],
+      "@models" : ["./src/models/*"],
+      "@routes" : ["./src/routes/*"],
+      "@config" : ["./src/config/*"]
+    },                                      
     "esModuleInterop": true,                  /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
     "resolveJsonModule": true,
     "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
