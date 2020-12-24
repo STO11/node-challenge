@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParse from 'body-parser';
+import routespuppy from './routes/recipepuppy.route';
 
 // initialize express
 const app = express();
@@ -12,11 +13,6 @@ app.use(bodyParse.urlencoded(
   },
 ));
 
-app.get('/', (req, res) => {
-  // res.send('ok');
-  res.json({
-    message: process.env.GIPHY_KEY,
-  });
-});
+app.use('/api', routespuppy);
 
 app.listen(3000);

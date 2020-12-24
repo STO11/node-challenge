@@ -16,6 +16,6 @@
     ],
     "rules": {
         "linebreak-style" :"off",
-        "no-duplicate-imports":"off"
+        "eslint-disable-next-line":"off"    
     }
 }

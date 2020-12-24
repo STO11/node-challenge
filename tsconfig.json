@@ -14,7 +14,7 @@
       "@controllers" : ["./src/controllers/*"],
       "@models" : ["./src/models/*"],
       "@routes" : ["./src/routes/*"],
-      "@config" : ["./src/config/*"]
+      "@configs" : ["./src/configs/*"]
     },                                      
     "esModuleInterop": true,                  /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
     "resolveJsonModule": true,
