@@ -16,6 +16,23 @@
     ],
     "rules": {
         "linebreak-style" :"off",
-        "eslint-disable-next-line":"off"    
+        "eslint-disable-next-line":"off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+              "js": "never",
+              "jsx": "never",
+              "ts": "never",
+              "tsx": "never"
+            }
+         ]
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
     }
 }

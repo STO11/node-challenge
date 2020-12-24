@@ -1,3 +1,2 @@
 const RECIPEROUTE:string = '/recipes';
-export { RECIPEROUTE };
-
+export default { RECIPEROUTE };
