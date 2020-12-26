@@ -25,10 +25,10 @@ export module RecipepuppyController {
           }
           res.send(new RecipepuppyModel(query.split(','), recipes)).status(200);
         } else {
-          res.json({ message: 'No data' }).status(204);
+          res.status(204).send('No data');
         }
       } else {
-        res.json({ message: 'No data' }).status(204);
+        res.status(204).send('No data');
       }
     }
 }
