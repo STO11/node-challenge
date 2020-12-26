@@ -1,5 +1,6 @@
 import express from 'express';
-// import { RECIPEROUTE } from '../routes/routes';
+import { RecipepuppyController } from '../controllers/recipepuppy.controller';
+import { HOME, RECIPE } from './routes';
 import { } from 'module';
 
 const app = express.Router();
@@ -9,7 +10,7 @@ const app = express.Router();
 //         message: process.env.GIPHY_KEY,
 //     });
 // });
-
-// app.get(RECIPEROUTE);
+app.get(HOME, RecipepuppyController.home);
+app.get(RECIPE, RecipepuppyController.loadRecipePuppy);
 
 export default app;

@@ -1,2 +1,3 @@
-const RECIPEROUTE:string = '/recipes';
-export default { RECIPEROUTE };
+const HOME:string = '/';
+const RECIPE:string = '/recipes';
+export { RECIPE, HOME };

@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParse from 'body-parser';
 import routespuppy from './routes/recipepuppy.route';
+import { PORT } from './configs/config';
 
 // initialize express
 const app = express();
@@ -15,4 +16,4 @@ app.use(bodyParse.urlencoded(
 
 app.use('/api', routespuppy);
 
-app.listen(3000);
+app.listen(PORT);
