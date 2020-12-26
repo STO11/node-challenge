@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Provider } from '../provider/provider';
 import RecipepuppyModel from '../models/recipepuppy.model';
 
