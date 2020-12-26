@@ -10,6 +10,7 @@ export module Provider {
 
     export async function puppyData(query:string) {
       try {
+        // console.log(`${optionsrecipe.host}${optionsrecipe.path}${query}`);
         const response = await axios.get(`${optionsrecipe.host}${optionsrecipe.path}${query}`);
         if (response.status === 200) { return response.data; }
         return null;
@@ -20,7 +21,8 @@ export module Provider {
 
     export async function getGiphy(title) {
       try {
-        const response = await axios.get(`${BASEURLGIPHY}?api_key=${GIPHY_KEY}&q=${title}`);
+        // console.log(`${BASEURLGIPHY}?api_key=${GIPHY_KEY}&q=${title}`);
+        const response = await axios.get(`${BASEURLGIPHY}?api_key=${GIPHY_KEY}&q=${title}&limit=1`);
         if (response.status === 200) { return response.data; }
         return null;
       } catch (error) {

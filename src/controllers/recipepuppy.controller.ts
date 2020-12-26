@@ -13,14 +13,21 @@ export module RecipepuppyController {
       if (query) {
         const resp = await Provider.puppyData(`?i=${query}`);
         if (resp.results.length > 0) {
-          await resp.results.forEach((item) => {
+          // eslint-disable-next-line no-restricted-syntax
+          for await (const item of resp.results) {
+            const gifImg = await Provider.getGiphy(item.title);
+            const ingredients = item?.ingredients.split(',').sort((a, b) => a.trim().localeCompare(b.trim()));
             const describe = {
-              title: item.title, ingredients: item.ingredients.split(','), link: item.href, gif: item.thumbnail,
+              title: item?.title ?? '', ingredients, link: item?.href ?? '', gif: gifImg?.data[0]?.images.original.url,
             };
             recipes.push(describe);
-          });
+          }
           res.send(new RecipepuppyModel(query.split(','), recipes)).status(200);
+        } else {
+          res.json({ message: 'No data' }).status(204);
         }
+      } else {
+        res.json({ message: 'No data' }).status(204);
       }
     }
 }
