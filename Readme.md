@@ -9,6 +9,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+
 ## API 
 
 Access URL: http://localhost:3000/api/recipes?i=carrot,potato,onion
@@ -16,5 +17,3 @@ Access URL: http://localhost:3000/api/recipes?i=carrot,potato,onion
 ## Params i 
 
 Where "i=" are the ingredients separated by commas
-
-
